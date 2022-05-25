@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Pokemon Array</title>
+</head>
+<body>
+
+    <h1>Pokemon Array</h1>
+
+<section>
+    <h3>Let's say you have an array of pokemon elements</h3>
+    <p class="code"> let pokemon = ["alakazam", "onix", "squirtle", "snorlax"]</p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/alakazam.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"></div>
+        <div class="array-bracets">]</div>
+    </div>
+</section>
+<section>
+    <h3>Let's say I want to see one of the elements in the pokemon array I will call it based on what index numner it is. In the javascript worled everything starts at 0, NOT 1</h3>
+    <div class="array-grid">
+        <div>Index#</div>
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div></div>
+        <div class="array-bracets">[</div>
+        <div><img src="./images/alakazam.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"> </div>
+        <div class="array-bracets">]</div>
+    </div>
+    
+    <p class="code"> pokemon[0] is "alakazam"</p>
+    <div class="array-single">
+        <div><img src="./images/alakazam.png"></div>
+    </div>
+    <p class="code"> pokemon[3] is "snorlax"</p>
+    <div class="array-single">
+        <div><img src="./images/snorlax.png"></div>
+    </div>
+   
+</section>
+<section>
+    <h3> Now we want to add psyduck to our group. You can add an element to the end of the array with push()</h3>
+    <p class="code"> pokemon.push("psyduck")</p>
+    <p> the pokemon array will look like this: ["alakazam", "onix", "squirtle", "snorlax", "psyduck"]</p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/alakazam.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png">, </div>
+        <div><img src="./images/psyduck.png">, </div>
+        <div class="array-bracets">]</div>
+    </div>
+
+</section>
+<section>
+    <h3> We realized we actually don't want psyduck and since he's on the end of our array we can pop him out. (Yes like a zit, you pop it!) </h3>
+    <p class="code"> pokemon.pop()</p>
+    <p> the array will now look like this: ["alakazam", "onix", "squirtle", "snorlax"] </p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/alakazam.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"> </div>
+        <div class="array-bracets">]</div>
+    </div>
+</section>
+
+<section>
+    <h3> Now let's say we don't want alakazam anymore in our array, we can shift the array to pop out the first element from our pokemon array </h3>
+    <p class="code"> pokemon.shift()</p>
+    <p> the array will now look like this: ["onix", "squirtle", "snorlax"] </p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"> </div>
+        <div class="array-bracets">]</div>
+    </div>
+</section>
+
+<section>
+    <h3> Now let's say we want pikachu to be the first element of our array, we can unshift the array.</h3>
+    <p class="code"> pokemon.unshift("pikachu")</p>
+    <p> the array will now look like this: ["pikachu", "onix", "squirtle", "snorlax"] </p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/pikachu.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"> </div>
+        <div class="array-bracets">]</div>
+    </div>
+</section>
+<section>
+    <h2>Splice vs Slice</h2>
+    <p>With both of these array methods you can remove items, but there is a difference in performance.</p>
+    <p>The splice() method returns the removed item(s) in an array. You can use this also to add items into an array</p>
+    <p>slice() method returns the selected element(s) in an array, as a new array object</p>
+</section>
+<section>
+    <h3>Splice can be used to remove and add items into an array.</h3>
+    <p class="code">splice(start, deleteCount, item1)</p>
+    <ul>
+        <li><span>Start:</span> The index at which to start changing the array.</li>
+        <li><span>deleteCount:</span> An integer indicating the number of elements in the array to remove from start</li>
+        <li><span>item1:</span> The elements to add to the array, beginning from start</li>
+    </ul>
+    <h3> Now let's say we want another pokemon to be the after the onix in our array, we can use the array and add where add the index number where we want to put our element.</h3>
+    <p class="code"> pokemon.splice( 2, 0,"meowth")</p>
+    <p> the array will now look like this: ["pikachu", "onix", "meowth","squirtle", "snorlax"] </p>
+    <div class="array">
+        <div class="array-bracets">[</div>
+        <div><img src="./images/pikachu.png">, </div>
+        <div><img src="./images/onix.png">, </div>
+        <div><img src="./images/meowth.png">, </div>
+        <div><img src="./images/squirtle.png">, </div>
+        <div><img src="./images/snorlax.png"> </div>
+        <div class="array-bracets">]</div>
+    </div>
+</section>
+
+</body>
+</html>
