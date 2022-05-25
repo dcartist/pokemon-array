@@ -11,15 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Lato:wght@100&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="intro item scrollFade">
-
+<div class="intro item scrollFade" id="top">
+<img src="images/pokemonlogo.png">
     <h1>Pokemon Array</h1>
     <p>scroll down</p>
+    <img src="images/arrow-down-big-small-solid.svg" class="updown"/>
+    
 </div>
 
-<section class="item scrollFade">
+<section class="item scrollFade" id="1">
     <h3>Let's say you have an array of pokemon elements</h3>
-    <p class="code"> let pokemon = ["alakazam", "onix", "squirtle", "snorlax"]</p>
+    <p class="code-block"> let pokemon = ["alakazam", "onix", "squirtle", "snorlax"]</p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/alakazam.png">, </div>
@@ -29,8 +31,8 @@
         <div class="array-bracets">]</div>
     </div>
 </section>
-<section class="item scrollFade">
-    <h3>Let's say I want to see one of the elements in the pokemon array I will call it based on what index numner it is. In the javascript worled everything starts at 0, NOT 1</h3>
+<section class="item scrollFade" id="2">
+    <h3>Let's say I want to see one of the elements in the pokemon array I will call it based on what index number it is. In the javascript worled everything starts at 0, NOT 1</h3>
     <div class="array-grid">
         <div>Index#</div>
         <div>0</div>
@@ -46,11 +48,11 @@
         <div class="array-bracets">]</div>
     </div>
 
-    <p class="code"> pokemon[0] is "alakazam"</p>
+    <p class="code-block"> pokemon[0] is "alakazam"</p>
     <div class="array-single">
         <div><img src="./images/alakazam.png"></div>
     </div>
-    <p class="code"> pokemon[3] is "snorlax"</p>
+    <p class="code-block"> pokemon[3] is "snorlax"</p>
     <div class="array-single">
         <div><img src="./images/snorlax.png"></div>
     </div>
@@ -58,8 +60,8 @@
 </section>
 <section class="item scrollFade">
     <h3> Now we want to add psyduck to our group. You can add an element to the end of the array with push()</h3>
-    <p class="code"> pokemon.push("psyduck")</p>
-    <p> the pokemon array will look like this: ["alakazam", "onix", "squirtle", "snorlax", "psyduck"]</p>
+    <p class="code-block"> pokemon.push("psyduck")</p>
+    <p> the pokemon array will look like this: <span class="code">["alakazam", "onix", "squirtle", "snorlax", "psyduck"]</span></p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/alakazam.png">, </div>
@@ -73,8 +75,8 @@
 </section>
 <section class="item scrollFade">
     <h3> We realized we actually don't want psyduck and since he's on the end of our array we can pop him out. (Yes like a zit, you pop it!) </h3>
-    <p class="code"> pokemon.pop()</p>
-    <p> the array will now look like this: ["alakazam", "onix", "squirtle", "snorlax"] </p>
+    <p class="code-block"> pokemon.pop()</p>
+    <p> the array will now look like this: <span class="code">["alakazam", "onix", "squirtle", "snorlax"] </span></p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/alakazam.png">, </div>
@@ -87,8 +89,8 @@
 
 <section class="item scrollFade">
     <h3> Now let's say we don't want alakazam anymore in our array, we can shift the array to pop out the first element from our pokemon array </h3>
-    <p class="code"> pokemon.shift()</p>
-    <p> the array will now look like this: ["onix", "squirtle", "snorlax"] </p>
+    <p class="code-block"> pokemon.shift()</p>
+    <p> the array will now look like this: <span class="code">["onix", "squirtle", "snorlax"]</span> </p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/onix.png">, </div>
@@ -100,8 +102,8 @@
 
 <section class="item scrollFade">
     <h3> Now let's say we want pikachu to be the first element of our array, we can unshift the array.</h3>
-    <p class="code"> pokemon.unshift("pikachu")</p>
-    <p> the array will now look like this: ["pikachu", "onix", "squirtle", "snorlax"] </p>
+    <p class="code-block"> pokemon.unshift("pikachu")</p>
+    <p> the array will now look like this: <span class="code">["pikachu", "onix", "squirtle", "snorlax"]</span>  </p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/pikachu.png">, </div>
@@ -119,15 +121,15 @@
 </section>
 <section class="item scrollFade">
     <h3>Splice can be used to remove and add items into an array.</h3>
-    <p class="code">splice(start, deleteCount, item1)</p>
+    <p class="code-block">splice(start, deleteCount, item1)</p>
     <ul>
         <li><span>Start:</span> The index at which to start changing the array.</li>
         <li><span>deleteCount:</span> An integer indicating the number of elements in the array to remove from start</li>
         <li><span>item1:</span> The elements to add to the array, beginning from start</li>
     </ul>
     <h3> Now let's say we want another pokemon to be the after the onix in our array, we can use the array and add where add the index number where we want to put our element.</h3>
-    <p class="code"> pokemon.splice( 2, 0,"meowth")</p>
-    <p> the array will now look like this: ["pikachu", "onix", "meowth","squirtle", "snorlax"] </p>
+    <p class="code-block"> pokemon.splice( 2, 0,"meowth")</p>
+    <p> the array will now look like this: <span class="code">["pikachu", "onix", "meowth","squirtle", "snorlax"]</span> </p>
     <div class="array">
         <div class="array-bracets">[</div>
         <div><img src="./images/pikachu.png">, </div>
@@ -141,11 +143,11 @@
 <section class="item scrollFade">
     <h2>Slice</h2>
     <p>Slice does not alter the original array. It returns a shallow copy of elements from the original array. Slice is used like this</p>
-    <p class="code">slice(start, end)</p>
+    <p class="code-block">slice(start, end)</p>
 
     <h3>Let's use slice to cut out some pokemon.</h3>
-    <p class="code">let newPokemon = pokemon.slice(1, 3)</p>
-    <p>new pokemon will bring back:  [ "onix", "meowth"]</p>
+    <p class="code-block">let newPokemon = pokemon.slice(1, 3)</p>
+    <p>new pokemon will bring back: <span class="code">["onix", "meowth"]</span>  </p>
 
     <div class="array">
         <div class="array-bracets">[</div>
@@ -154,7 +156,7 @@
         <div class="array-bracets">]</div>
     </div>
 
-    <p> while pokemon will bring back  ["pikachu", "onix", "meowth","squirtle", "snorlax"]</p>
+    <p> while pokemon will bring back <span class="code">["pikachu", "onix", "meowth","squirtle", "snorlax"]</span></p>
     
     <div class="array">
         <div class="array-bracets">[</div>
@@ -166,6 +168,8 @@
         <div class="array-bracets">]</div>
     </div>
 </section>
+<p><a href="#top">Back to the top 
+    <img src="images/arrow-up-big-small-solid.svg" class="updown"/></a></p>
 <script src="js/scrollfade.js"></script>
 </body>
 </html>

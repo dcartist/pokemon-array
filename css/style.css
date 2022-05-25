@@ -6,11 +6,23 @@ font-family: 'Lato', sans-serif;
 font-family: 'Roboto', sans-serif;
  */
 
-
+ [id]::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -50px;
+    visibility: hidden;
+  }
 body{
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.intro img{
+    width: 50%;
 }
 .array{
     display: flex;
@@ -34,10 +46,25 @@ body{
     margin: 0 15px;
     font-weight: bold;
 }
+span {
+    font-weight: 600;
+}
 
-.code{
+.code,span.code{
+    
+    font-family: monospace;
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+
+}
+.code-block{
+    max-width: 65%;
     display: flex;
     justify-content: center;
+    font-family: monospace;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    margin: 20px auto;
 }
 
 .array-bracets{
@@ -47,10 +74,17 @@ body{
 .array-single img{
     width: 160px;
 }
+  span {
+      font-weight: 600;
+  }
 
 section{
-    /* min-height: 60vh; */
-    margin: 160px 0;
+    /* display: flex;
+    align-items:center;
+    flex-direction: column; */
+    min-height: 95vh;
+    /* margin: 160px 0; */
+    margin-top: 300px;
 }
 
 ul li{
@@ -97,3 +131,9 @@ background: -webkit-radial-gradient(circle, rgba(242,251,2,0.9978700953037465) 1
 background: radial-gradient(circle, rgba(242,251,2,0.9978700953037465) 15%, rgba(247,190,2,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2fb02",endColorstr="#f7be02",GradientType=1);
   }
+
+  .updown{
+      height: 100px;
+      /* border: 1px solid black; */
+  }
+
