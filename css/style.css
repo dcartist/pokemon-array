@@ -1,5 +1,16 @@
+/* 
+
+font-family: 'Abril Fatface', cursive;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+ */
+
+
 body{
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
 }
 .array{
     display: flex;
@@ -38,8 +49,8 @@ body{
 }
 
 section{
-    min-height: 60vh;
-    margin-top: 60px;
+    /* min-height: 60vh; */
+    margin: 160px 0;
 }
 
 ul li{
@@ -50,8 +61,39 @@ ul li{
 h3{
     max-width: 60%;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .array-grid{
     margin-top: 50px;
 }
+
+.scrollFade {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .scrollFade--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scrollFade--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .scrollFade--animate {
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .intro{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(242,251,2);
+background: -moz-radial-gradient(circle, rgba(242,251,2,0.9978700953037465) 15%, rgba(247,190,2,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(242,251,2,0.9978700953037465) 15%, rgba(247,190,2,1) 100%);
+background: radial-gradient(circle, rgba(242,251,2,0.9978700953037465) 15%, rgba(247,190,2,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2fb02",endColorstr="#f7be02",GradientType=1);
+  }
